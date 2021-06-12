@@ -22,5 +22,10 @@ namespace KyWare.BApp.Data.Models
         public string Author { get; set; }
 
         public DateTime DateAdd { get; set; }
+
+        // Navigation Property
+        public int? PublisherId { get; set; }
+
+        public Publisher Publisher { get; set; }
     }
 }

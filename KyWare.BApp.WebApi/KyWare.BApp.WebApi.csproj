@@ -27,9 +27,6 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Databases\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\KyWare.BApp.Data\KyWare.BApp.Data.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>

@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using KyWare.BApp.Data.Models;
+using KyWare.BApp.Data;
 
 namespace KyWare.BApp.WebApi.Databases
 {

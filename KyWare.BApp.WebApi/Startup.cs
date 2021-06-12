@@ -14,20 +14,20 @@ using Microsoft.Extensions.Logging;
 using KyWare.BApp.WebApi.Databases;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using KyWare.BApp.Data;
+using KyWare.BApp.WebApi.Commons;
+using KyWare.BApp.WebApi.Services;
 
 namespace KyWare.BApp.WebApi
 {
     public class Startup
     {
-        public string ConnectionString { get; set; }
 
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
-            ConnectionString = Configuration.GetConnectionString("DefaultConnectionString");
+            AppConfig.Configuration = configuration;
+            AppConfig.ConnectionString = AppConfig.Configuration.GetConnectionString("DefaultConnectionString");
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -37,6 +37,9 @@ namespace KyWare.BApp.WebApi
 
             // Setup Db
             SetUpDbContext(services);
+
+            // Add Transient
+            services.AddTransient<BooksService>();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -82,16 +85,16 @@ namespace KyWare.BApp.WebApi
         public void SetUpDbContext(IServiceCollection services)
         {
 
-            var dbProvider = Configuration.GetValue<String>("DbProvider");
+            var dbProvider = AppConfig.GetCurrentDbProvider();
             switch (dbProvider)
             {
-                case "sqlserver":
+                case EnumDatabaseProvider.SqlServer:
                     // Setup Db Context
-                    services.AddDbContext<AppDbContext>(options => options.UseSqlServer(ConnectionString));
+                    services.AddDbContext<AppDbContext>(options => options.UseSqlServer(AppConfig.ConnectionString));
                     break;
-                case "postgresql":
+                case EnumDatabaseProvider.Postgresql:
                     // Setup Db Context
-                    services.AddDbContext<AppDbContext>(options => options.UseNpgsql(ConnectionString));
+                    services.AddDbContext<AppDbContext>(options => options.UseNpgsql(AppConfig.ConnectionString));
                     break;
             }
         }
