@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KyWare.BApp.WebApi", "KyWare.BApp.WebApi\KyWare.BApp.WebApi.csproj", "{B45F8B65-6215-4647-94E0-3914E360B373}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{D0805DE9-FAFF-4209-9786-433450888ABA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iOS App", "iOS App", "{883E3688-C3F2-429D-8BF3-FD6DE2566293}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows Desktop", "Windows Desktop", "{947C5E12-4404-44B6-A439-201635C7A3D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{868019CC-8D4F-4AF6-A0F4-6A855FA7CD24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KyWare.BApp.Data", "KyWare.BApp.Data\KyWare.BApp.Data.csproj", "{E5E70D7F-AAAA-4B02-A513-7D4A5F799E32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B45F8B65-6215-4647-94E0-3914E360B373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45F8B65-6215-4647-94E0-3914E360B373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45F8B65-6215-4647-94E0-3914E360B373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45F8B65-6215-4647-94E0-3914E360B373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5E70D7F-AAAA-4B02-A513-7D4A5F799E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5E70D7F-AAAA-4B02-A513-7D4A5F799E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5E70D7F-AAAA-4B02-A513-7D4A5F799E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5E70D7F-AAAA-4B02-A513-7D4A5F799E32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A86E1B7-02CE-43B2-B7AB-133077432584}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B45F8B65-6215-4647-94E0-3914E360B373} = {D0805DE9-FAFF-4209-9786-433450888ABA}
+		{E5E70D7F-AAAA-4B02-A513-7D4A5F799E32} = {868019CC-8D4F-4AF6-A0F4-6A855FA7CD24}
+	EndGlobalSection
+EndGlobal
